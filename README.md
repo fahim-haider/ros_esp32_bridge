@@ -6,7 +6,7 @@ This code creates a bridge between the ESP-32 microcontroller and a ROS program 
 ## Components Used
 
 - ESP-32
-- X Motor Drivers
+- TB6612FNG Motor Driver
 
 
 ## Functionality
