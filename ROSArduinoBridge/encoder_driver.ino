@@ -68,6 +68,25 @@
       return;
     }
   }
+#elif defined(MOTOR_ENCODER)
+  #include "ESP32Encoder.h"
+
+  ESP32Encoder right_encoder;
+  ESP32Encoder left_encoder;
+
+  void setup() {
+    Serial.begin(BAUDRATE);
+    ESP32Encoder::useInternalWeakPullResistors = UP;
+
+    right_encoder.attachHalfQuad(RIGHT_ENC_PIN_A, RIGHT_ENC_PIN_B);
+    left_encoder.attachHalfQuad(LEFT_ENC_PIN_A, LEFT_ENC_PIN_B);
+
+    right_encoder.clearCount();
+    left_encoder.clearCount();
+  }
+
+
+
 #else
   #error A encoder driver must be selected!
 #endif

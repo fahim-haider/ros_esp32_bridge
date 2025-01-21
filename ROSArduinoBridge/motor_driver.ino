@@ -32,7 +32,7 @@
     setMotorSpeed(LEFT, leftSpeed);
     setMotorSpeed(RIGHT, rightSpeed);
   }
-#elif defined POLOLU_MC33926
+#elif defined(POLOLU_MC33926)
   /* Include the Pololu library */
   #include "DualMC33926MotorShield.h"
 
@@ -56,7 +56,7 @@
     setMotorSpeed(RIGHT, rightSpeed);
   }
 
-#elif defined L298_MOTOR_DRIVER
+#elif defined(L298_MOTOR_DRIVER)
   void initMotorController() {
     digitalWrite(RIGHT_MOTOR_ENABLE, HIGH);
     digitalWrite(LEFT_MOTOR_ENABLE, HIGH);
@@ -88,7 +88,7 @@
     setMotorSpeed(RIGHT, rightSpeed);
   }
 
-#elif defined TB6612FNG_MOTOR_DRIVER
+#elif defined(TB6612FNG_MOTOR_DRIVER)
   void initMotorController() {
     // Configure PWM for Motor A
     ledcAttach(RIGHT_PWM_CONTROL, PWM_FREQUENCY, PWM_RESOLUTION);

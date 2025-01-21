@@ -62,6 +62,9 @@
    /* Encoders directly attached to Arduino board */
    #define ARDUINO_ENC_COUNTER
 
+   /* Encoders directly attached to motor*/
+   #define MOTOR_ENCODER
+
    /* L298 Motor driver*/
    //#define L298_MOTOR_DRIVER
 

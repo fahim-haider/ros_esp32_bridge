@@ -12,9 +12,14 @@
   //below can be changed, but should be PORTC pins
   #define RIGHT_ENC_PIN_A PC4  //pin A4
   #define RIGHT_ENC_PIN_B PC5   //pin A5
+#elif defined(MOTOR_ENCODER)
+  #define RIGHT_ENC_PIN_A 34
+  #define RIGHT_ENC_PIN_B 35
+
+  #define LEFT_ENC_PIN_A 12
+  #define LEFT_ENC_PIN_B 16
 #endif
    
 long readEncoder(int i);
 void resetEncoder(int i);
 void resetEncoders();
-
